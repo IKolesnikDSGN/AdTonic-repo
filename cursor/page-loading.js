@@ -31,8 +31,8 @@ function initializePageLoadingAnimation() {
     // Гибкий размер пикселя в зависимости от размера экрана
     let pixelSize;
     if (viewportWidth <= 768) {
-        // Мобильные устройства - пиксель составляет ~8% от ширины экрана
-        pixelSize = Math.max(40, Math.min(80, viewportWidth * 0.08));
+        // Мобильные устройства - пиксель составляет ~32% от ширины экрана (в 4 раза больше)
+        pixelSize = Math.max(160, Math.min(320, viewportWidth * 0.32));
     } else if (viewportWidth <= 1024) {
         // Планшеты - пиксель составляет ~6% от ширины экрана
         pixelSize = Math.max(60, Math.min(90, viewportWidth * 0.06));
@@ -123,7 +123,7 @@ function initializePageLoadingAnimation() {
         
         // Гибкий размер пикселя в зависимости от размера экрана
         if (newViewportWidth <= 768) {
-            newPixelSize = Math.max(40, Math.min(80, newViewportWidth * 0.08));
+            newPixelSize = Math.max(160, Math.min(320, newViewportWidth * 0.32));
         } else if (newViewportWidth <= 1024) {
             newPixelSize = Math.max(60, Math.min(90, newViewportWidth * 0.06));
         } else {
